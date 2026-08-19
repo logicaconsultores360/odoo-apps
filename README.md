@@ -11,7 +11,7 @@ source language, and packaged with the store assets each listing needs.
 | Module | Category | Depends on | Status |
 | --- | --- | --- | --- |
 | `subscription_draft_invoice` | Sales / Subscriptions | `sale_subscription` (EE) | Published |
-| `account_invoice_preview` | Accounting | `account` | Ready |
+| `account_invoice_preview` | Accounting | `account` | Ready — free (LGPL-3) |
 | `delivery_volumetric_weight` | Inventory / Delivery | `delivery` | Ready |
 | `website_sale_attribute_filter_visibility` | Website / eCommerce | `website_sale` | Ready |
 | `attendance_quicklink` | Human Resources | `hr_attendance` | Draft (branch `fichajes`) |
@@ -47,6 +47,10 @@ python3 -c "import cairosvg; cairosvg.svg2png(url='banner.svg', write_to='banner
 
 ## Licensing
 
-Store modules are shipped under **OPL-1**, matching the first published listing.
-Their counterparts in the internal library keep the licence they were written
-under; relicensing is possible because Lógica Consultores 360 owns the code.
+Licence follows the listing: **OPL-1** for paid modules, **LGPL-3** for free
+ones. `account_invoice_preview` ships free because the store already carries a
+free PDF-preview module for 19.0 — competing on price there is not winnable,
+and a widely installed free listing is what earns the reviews the paid ones
+need. Their counterparts in the internal library keep the licence they were
+written under; relicensing is possible because Lógica Consultores 360 owns the
+code.

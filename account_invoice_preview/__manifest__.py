@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # © 2026 Lógica Consultores 360 — https://www.logicaconsultores.com
+# License LGPL-3 or later (https://www.gnu.org/licenses/lgpl-3.0)
 {
     'name': 'Invoice PDF Live Preview',
     'version': '19.0.1.0.0',
@@ -38,7 +39,7 @@ Features
         ],
     },
     'images': ['static/description/banner.png'],
-    'license': 'OPL-1',
+    'license': 'LGPL-3',
     'installable': True,
     'application': False,
     'auto_install': False,
