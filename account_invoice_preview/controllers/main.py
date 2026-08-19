@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # © 2026 Lógica Consultores 360 — https://www.logicaconsultores.com
+# License LGPL-3 or later (https://www.gnu.org/licenses/lgpl-3.0)
 import logging
 
 from odoo import http
