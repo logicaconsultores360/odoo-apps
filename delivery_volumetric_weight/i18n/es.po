@@ -1,0 +1,61 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * delivery_volumetric_weight
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Lógica Consultores 360\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: delivery_volumetric_weight
+#: model:ir.model.fields,field_description:delivery_volumetric_weight.field_product_template__product_length
+msgid "Length (cm)"
+msgstr "Largo (cm)"
+
+#. module: delivery_volumetric_weight
+#: model:ir.model.fields,field_description:delivery_volumetric_weight.field_product_template__product_width
+msgid "Width (cm)"
+msgstr "Ancho (cm)"
+
+#. module: delivery_volumetric_weight
+#: model:ir.model.fields,field_description:delivery_volumetric_weight.field_product_template__product_height
+msgid "Height (cm)"
+msgstr "Alto (cm)"
+
+#. module: delivery_volumetric_weight
+#: model:ir.model.fields,field_description:delivery_volumetric_weight.field_product_template__volumetric_divisor
+msgid "Volumetric Divisor"
+msgstr "Divisor volumétrico"
+
+#. module: delivery_volumetric_weight
+#: model:ir.model.fields,field_description:delivery_volumetric_weight.field_product_template__volumetric_weight
+msgid "Volumetric Weight (kg)"
+msgstr "Peso volumétrico (kg)"
+
+#. module: delivery_volumetric_weight
+#: model:ir.model.fields.selection,name:delivery_volumetric_weight.selection__delivery_price_rule__variable__effective_weight
+#: model:ir.model.fields.selection,name:delivery_volumetric_weight.selection__delivery_price_rule__variable_factor__effective_weight
+msgid "Effective Weight"
+msgstr "Peso efectivo"
+
+#. module: delivery_volumetric_weight
+#: model_terms:ir.ui.view,arch_db:delivery_volumetric_weight.product_template_form_view_volumetric_weight
+msgid "Dimensions"
+msgstr "Dimensiones"
+
+#. module: delivery_volumetric_weight
+#: model_terms:ir.ui.view,arch_db:delivery_volumetric_weight.product_template_form_view_volumetric_weight
+msgid "Packed dimensions (cm)"
+msgstr "Dimensiones del embalaje (cm)"
+
+#. module: delivery_volumetric_weight
+#: model_terms:ir.ui.view,arch_db:delivery_volumetric_weight.product_template_form_view_volumetric_weight
+msgid "Volumetric weight"
+msgstr "Peso volumétrico"

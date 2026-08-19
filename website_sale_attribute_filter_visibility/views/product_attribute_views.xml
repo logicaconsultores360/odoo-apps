@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Add the "Visible in eCommerce" toggle to the attribute values list -->
+    <record id="product_attribute_value_website_visible_form" model="ir.ui.view">
+        <field name="name">product.attribute.value.website.visible.form</field>
+        <field name="model">product.attribute</field>
+        <field name="inherit_id" ref="product.product_attribute_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='value_ids']/list/field[@name='default_extra_price']" position="after">
+                <field name="website_visible" widget="boolean_toggle" width="140px"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

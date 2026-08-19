@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_template_form_view_volumetric_weight" model="ir.ui.view">
+        <field name="name">product.template.form.volumetric.weight</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='general_information']" position="after">
+                <page string="Dimensions" name="dimensions">
+                    <group>
+                        <group string="Packed dimensions (cm)">
+                            <field name="product_length"/>
+                            <field name="product_width"/>
+                            <field name="product_height"/>
+                        </group>
+                        <group string="Volumetric weight">
+                            <field name="volumetric_divisor"/>
+                            <field name="volumetric_weight"/>
+                            <field name="weight" readonly="1"/>
+                        </group>
+                    </group>
+                    <div class="text-muted mt-2">
+                        Carriers bill the greater of the real weight and the volumetric
+                        weight. Select <b>Effective Weight</b> as the variable of a delivery
+                        price rule to charge on that basis.
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Make the volumetric fields available for mass editing from the list view -->
+    <record id="product_template_list_view_volumetric_weight" model="ir.ui.view">
+        <field name="name">product.template.list.volumetric.weight</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="volumetric_weight" optional="hide"/>
+                <field name="volumetric_divisor" optional="hide"/>
+            </field>
+        </field>
+    </record>
+</odoo>

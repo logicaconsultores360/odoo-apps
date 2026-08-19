@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2026 Lógica Consultores 360 — https://www.logicaconsultores.com
+
+     Every shop filter layout iterates over `a.value_ids`.  We redirect each of
+     them to `a.website_value_ids`, the subset flagged as visible in eCommerce.
+-->
+<odoo>
+
+    <template id="filter_pills_attributes_website_visible" inherit_id="website_sale.filter_pills_attributes">
+        <xpath expr="//t[@t-foreach='a.value_ids']" position="attributes">
+            <attribute name="t-foreach">a.website_value_ids</attribute>
+        </xpath>
+    </template>
+
+    <template id="filter_color_attributes_website_visible" inherit_id="website_sale.filter_color_attributes">
+        <xpath expr="//t[@t-foreach='a.value_ids']" position="attributes">
+            <attribute name="t-foreach">a.website_value_ids</attribute>
+        </xpath>
+    </template>
+
+    <template id="filter_image_attributes_website_visible" inherit_id="website_sale.filter_image_attributes">
+        <xpath expr="//t[@t-foreach='a.value_ids']" position="attributes">
+            <attribute name="t-foreach">a.website_value_ids</attribute>
+        </xpath>
+    </template>
+
+    <template id="filter_select_attributes_website_visible" inherit_id="website_sale.filter_select_attributes">
+        <xpath expr="//t[@t-foreach='a.value_ids']" position="attributes">
+            <attribute name="t-foreach">a.website_value_ids</attribute>
+        </xpath>
+    </template>
+
+    <template id="filter_radio_and_multi_attributes_website_visible" inherit_id="website_sale.filter_radio_and_multi_attributes">
+        <xpath expr="//t[@t-set='sorted_values']" position="attributes">
+            <attribute name="t-value">sorted(a.website_value_ids, key=lambda v: v.id not in attrib_set)</attribute>
+        </xpath>
+        <xpath expr="//input[contains(@class, 'o_wsale_attribute_search_bar')]" position="attributes">
+            <attribute name="t-attf-placeholder">Search {{a.name}} ({{len(a.website_value_ids)}})</attribute>
+        </xpath>
+    </template>
+
+    <template id="product_attribute_filters_form_website_visible" inherit_id="website_sale.product_attribute_filters_form">
+        <xpath expr="//t[@t-set='visible_attributes']" position="attributes">
+            <attribute name="t-value">len([a for a in attributes if a.website_value_ids and len(a.website_value_ids) > 1])</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'accordion-item')]" position="attributes">
+            <attribute name="t-if">a.website_value_ids and len(a.website_value_ids) > 1</attribute>
+        </xpath>
+    </template>
+
+</odoo>

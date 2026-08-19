@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_sale_attribute_filter_visibility
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Lógica Consultores 360\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_sale_attribute_filter_visibility
+#: model:ir.model.fields,field_description:website_sale_attribute_filter_visibility.field_product_attribute_value__website_visible
+msgid "Visible in eCommerce"
+msgstr "Visible en eCommerce"
+
+#. module: website_sale_attribute_filter_visibility
+#: model:ir.model.fields,help:website_sale_attribute_filter_visibility.field_product_attribute_value__website_visible
+msgid ""
+"When unchecked, this value is hidden from the shop filters. Products carrying"
+" it are still sold normally and the value is still shown on the product page "
+"and in the back office."
+msgstr ""
+"Si se desmarca, este valor se oculta en los filtros de la tienda. Los "
+"productos que lo llevan se siguen vendiendo con normalidad y el valor sigue "
+"mostrándose en la ficha de producto y en el backend."
+
+#. module: website_sale_attribute_filter_visibility
+#: model:ir.model.fields,field_description:website_sale_attribute_filter_visibility.field_product_attribute__website_value_ids
+msgid "Values shown in eCommerce filters"
+msgstr "Valores mostrados en los filtros del eCommerce"
+
+#. module: website_sale_attribute_filter_visibility
+#: model:ir.model.fields,help:website_sale_attribute_filter_visibility.field_product_attribute__website_value_ids
+msgid "Subset of the attribute values that the shop filters display."
+msgstr "Subconjunto de valores del atributo que muestran los filtros de la tienda."

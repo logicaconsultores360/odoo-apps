@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <rect width="128" height="128" rx="22" ry="22" fill="#0f3460"/>
+
+  <!-- Filter panel card -->
+  <rect x="20" y="20" width="74" height="88" rx="6" fill="#ffffff"/>
+
+  <!-- Panel title -->
+  <rect x="30" y="31" width="34" height="6" rx="3" fill="#0f3460" opacity="0.55"/>
+
+  <!-- Filter rows: checkbox + label -->
+  <rect x="30" y="47" width="11" height="11" rx="2.5" fill="#e8431a"/>
+  <rect x="47" y="50" width="37" height="6" rx="3" fill="#c8d6e3"/>
+
+  <rect x="30" y="65" width="11" height="11" rx="2.5" fill="#e8431a"/>
+  <rect x="47" y="68" width="30" height="6" rx="3" fill="#c8d6e3"/>
+
+  <!-- Hidden row: greyed out + strike -->
+  <rect x="30" y="83" width="11" height="11" rx="2.5" fill="#e6ebf1"/>
+  <rect x="47" y="86" width="34" height="6" rx="3" fill="#eaeef4"/>
+  <line x1="28" y1="88.5" x2="86" y2="88.5" stroke="#a0b4cc" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Eye-off badge -->
+  <circle cx="96" cy="94" r="26" fill="#0f3460"/>
+  <circle cx="96" cy="94" r="22" fill="#e8431a"/>
+  <path d="M83 94 Q96 82 109 94 Q96 106 83 94 Z" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="96" cy="94" r="4.5" fill="#ffffff"/>
+  <line x1="82" y1="107" x2="110" y2="81" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+</svg>

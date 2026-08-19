@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="60%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f3460"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="1120" cy="90" r="200" fill="#e8431a" opacity="0.07"/>
+  <circle cx="90" cy="830" r="170" fill="#a0b4cc" opacity="0.06"/>
+
+  <text x="600" y="102" text-anchor="middle" fill="#ffffff" font-size="46" font-weight="700" letter-spacing="-1">Hide Attribute Values from Shop Filters</text>
+  <text x="600" y="148" text-anchor="middle" fill="#a0b4cc" font-size="25">One toggle per value — keep the filter panel about what customers actually pick</text>
+  <rect x="512" y="174" width="176" height="34" rx="17" fill="#e8431a"/>
+  <text x="600" y="197" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="600" letter-spacing="1.5">ODOO 19</text>
+
+  <!-- ══ BEFORE ══ -->
+  <text x="330" y="262" text-anchor="middle" fill="#8fa3bd" font-size="20" font-weight="600" letter-spacing="2">BEFORE</text>
+  <g filter="url(#shadow)">
+    <rect x="150" y="282" width="360" height="400" rx="10" fill="#ffffff"/>
+  </g>
+  <text x="182" y="322" fill="#0f3460" font-size="19" font-weight="700">Colour</text>
+  <g font-size="17" fill="#5b6b80">
+    <rect x="182" y="340" width="16" height="16" rx="3" fill="#0f3460"/><text x="212" y="354">Black</text>
+    <rect x="182" y="372" width="16" height="16" rx="3" fill="#0f3460"/><text x="212" y="386">White</text>
+    <rect x="182" y="404" width="16" height="16" rx="3" fill="#d8dfe8"/><text x="212" y="418" fill="#9aa8ba">RAL-7016-OLD</text>
+    <rect x="182" y="436" width="16" height="16" rx="3" fill="#d8dfe8"/><text x="212" y="450" fill="#9aa8ba">SUPPLIER-C4</text>
+    <rect x="182" y="468" width="16" height="16" rx="3" fill="#d8dfe8"/><text x="212" y="482" fill="#9aa8ba">disc-2019</text>
+  </g>
+  <rect x="182" y="506" width="296" height="1.5" fill="#e3e8ef"/>
+  <text x="182" y="540" fill="#0f3460" font-size="19" font-weight="700">Size</text>
+  <g font-size="17" fill="#5b6b80">
+    <rect x="182" y="556" width="16" height="16" rx="3" fill="#0f3460"/><text x="212" y="570">S</text>
+    <rect x="182" y="582" width="16" height="16" rx="3" fill="#0f3460"/><text x="212" y="596">M</text>
+    <rect x="182" y="608" width="16" height="16" rx="3" fill="#0f3460"/><text x="212" y="622">L</text>
+    <rect x="182" y="634" width="16" height="16" rx="3" fill="#d8dfe8"/><text x="212" y="648" fill="#9aa8ba">INT-BOX-04</text>
+    <rect x="182" y="660" width="16" height="16" rx="3" fill="#d8dfe8"/><text x="212" y="674" fill="#9aa8ba">TEST-DO-NOT-USE</text>
+  </g>
+
+  <!-- Arrow -->
+  <g stroke="#e8431a" stroke-width="7" stroke-linecap="round" fill="none">
+    <line x1="556" y1="470" x2="638" y2="470"/>
+    <polyline points="616,450 640,470 616,490" stroke-linejoin="round"/>
+  </g>
+
+  <!-- ══ AFTER ══ -->
+  <text x="870" y="262" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="600" letter-spacing="2">AFTER</text>
+  <g filter="url(#shadow)">
+    <rect x="690" y="282" width="360" height="400" rx="10" fill="#ffffff"/>
+    <rect x="690" y="282" width="360" height="400" rx="10" fill="none" stroke="#e8431a" stroke-width="3"/>
+  </g>
+  <text x="722" y="322" fill="#0f3460" font-size="19" font-weight="700">Colour</text>
+  <g font-size="17" fill="#5b6b80">
+    <rect x="722" y="340" width="16" height="16" rx="3" fill="#0f3460"/><text x="752" y="354">Black</text>
+    <rect x="722" y="372" width="16" height="16" rx="3" fill="#0f3460"/><text x="752" y="386">White</text>
+  </g>
+  <rect x="722" y="410" width="296" height="1.5" fill="#e3e8ef"/>
+  <text x="722" y="444" fill="#0f3460" font-size="19" font-weight="700">Size</text>
+  <g font-size="17" fill="#5b6b80">
+    <rect x="722" y="462" width="16" height="16" rx="3" fill="#0f3460"/><text x="752" y="476">S</text>
+    <rect x="722" y="494" width="16" height="16" rx="3" fill="#0f3460"/><text x="752" y="508">M</text>
+    <rect x="722" y="526" width="16" height="16" rx="3" fill="#0f3460"/><text x="752" y="540">L</text>
+  </g>
+  <text x="722" y="600" fill="#3fa06a" font-size="17" font-weight="600">Clean, shoppable filters</text>
+  <text x="722" y="630" fill="#8896a8" font-size="16">Internal values stay in the back office,</text>
+  <text x="722" y="654" fill="#8896a8" font-size="16">products keep selling as usual.</text>
+
+  <!-- Feature strip -->
+  <g fill="#ffffff" font-size="21">
+    <circle cx="228" cy="750" r="12" fill="#e8431a"/>
+    <text x="228" y="756" text-anchor="middle" font-size="15" font-weight="700">✓</text>
+    <text x="250" y="757">One toggle per value</text>
+
+    <circle cx="620" cy="750" r="12" fill="#e8431a"/>
+    <text x="620" y="756" text-anchor="middle" font-size="15" font-weight="700">✓</text>
+    <text x="642" y="757">All filter layouts covered</text>
+
+    <text x="600" y="810" text-anchor="middle" font-size="20" fill="#a0b4cc">Pills · Colours · Images · Select · Radio · Multi-checkbox</text>
+  </g>
+
+  <text x="600" y="862" text-anchor="middle" fill="#a0b4cc" font-size="19">Lógica Consultores 360 · www.logicaconsultores.com</text>
+</svg>

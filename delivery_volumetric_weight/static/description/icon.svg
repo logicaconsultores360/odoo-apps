@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <rect width="128" height="128" rx="22" ry="22" fill="#0f3460"/>
+
+  <!-- Parcel: isometric box -->
+  <polygon points="64,20 108,42 64,64 20,42" fill="#ffffff"/>
+  <polygon points="20,42 64,64 64,110 20,88" fill="#c8d6e3"/>
+  <polygon points="108,42 64,64 64,110 108,88" fill="#a0b4cc"/>
+  <!-- Tape -->
+  <polygon points="64,20 78,27 34,49 20,42" fill="#dde6f0"/>
+
+  <!-- Dimension arrows on the front-left face -->
+  <g stroke="#0f3460" stroke-width="2.5" stroke-linecap="round" opacity="0.55">
+    <line x1="27" y1="53" x2="27" y2="83"/>
+    <line x1="30" y1="60" x2="52" y2="72"/>
+  </g>
+
+  <!-- Scale / weight badge -->
+  <circle cx="94" cy="92" r="27" fill="#0f3460"/>
+  <circle cx="94" cy="92" r="23" fill="#e8431a"/>
+  <!-- Feather + arrow up (light but charged more) -->
+  <path d="M84 100 L104 80" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M96 80 L104 80 L104 88" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="85" cy="99" r="4" fill="#ffffff"/>
+</svg>
