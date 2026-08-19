@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <style>
+<style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; margin: 0; padding: 0; }
 
         /* ── Header ── */
@@ -138,27 +138,41 @@
             margin: 4px;
         }
     </style>
+    <style>
+        .lc-table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+        .lc-table th { background: #0f3460; color: #fff; text-align: left; padding: 10px 14px; font-weight: 600; }
+        .lc-table td { border-bottom: 1px solid #eee; padding: 10px 14px; }
+        .lc-table tr:last-child td { border-bottom: none; }
+        .lc-note { background: #f7f8fb; border-left: 4px solid #0f3460; padding: 14px 18px; font-size: .95rem; line-height: 1.65; }
+        .lc-tag { display:inline-block; background:#eef1f5; color:#0f3460; border-radius:3px; padding:2px 8px; font-size:.8rem; font-weight:600; margin:2px; }
+    </style>
 </head>
 <body>
 
 <!-- ── HEADER ── -->
 <div class="lc-header">
-    <h1>Subscription Draft Invoice</h1>
-    <p>Keep auto-generated subscription invoices in Draft until you're ready to post them</p>
-    <span class="lc-badge">Odoo 19 · Enterprise</span>
+    <h1>Invoice PDF Live Preview</h1>
+    <p>See the printed invoice while you edit it &mdash; no printing, no attachments</p>
+    <span class="lc-badge">Odoo 19 &middot; Community &amp; Enterprise</span>
 </div>
+
+<!-- ── SCREENSHOT ── -->
 
 <!-- ── OVERVIEW ── -->
 <div class="lc-section">
     <h2>Overview</h2>
     <p>
-        Since Odoo 16, the subscription scheduler posts invoices automatically — with no way to
-        review them first. This module brings back the control you had in Odoo 15 and earlier:
-        a simple toggle on each <strong>Recurring Plan</strong> that keeps auto-invoices in
-        <strong>Draft</strong> state, ready for your team to review and confirm manually.
+        Checking how an invoice will actually look normally means posting it, printing it,
+        opening the generated PDF, closing it, going back to the form, fixing a line&hellip;
+        and doing it all over again. Every round trip leaves an attachment behind and costs
+        you a minute.
     </p>
     <p>
-        Plans without the option enabled continue to work exactly as before — zero side effects.
+        This module adds a <strong>PDF Preview</strong> button to the invoice form. The report
+        is rendered on the fly and shown in a panel right next to the form, so you can read the
+        real printed document &mdash; your layout, your fonts, your fiscal notes &mdash; while
+        you are still editing the draft. Change something, hit <em>Refresh</em>, and the PDF
+        updates. Nothing is ever attached to the record.
     </p>
 </div>
 
@@ -170,23 +184,31 @@
     <ul class="lc-features">
         <li>
             <span class="lc-check"></span>
-            <span><strong>Per-plan configuration</strong> — enable Draft Invoicing on any Recurring Plan independently.</span>
+            <span><strong>Preview drafts</strong> &mdash; you do not have to post the invoice to see the final document.</span>
         </li>
         <li>
             <span class="lc-check"></span>
-            <span><strong>Non-destructive</strong> — plans without the flag behave exactly as native Odoo.</span>
+            <span><strong>Side-by-side panel</strong> &mdash; the PDF opens next to the form, not in a new tab, so the fields stay in reach.</span>
         </li>
         <li>
             <span class="lc-check"></span>
-            <span><strong>Payment token compatible</strong> — draft invoices are skipped by the automatic payment flow, preventing unwanted charges.</span>
+            <span><strong>One-click refresh</strong> &mdash; re-render the PDF after every change without reloading the page.</span>
         </li>
         <li>
             <span class="lc-check"></span>
-            <span><strong>Visible at a glance</strong> — the Draft Invoicing column appears directly in the Recurring Plans list view.</span>
+            <span><strong>No stray attachments</strong> &mdash; the preview is streamed, never stored, so the chatter stays clean.</span>
         </li>
         <li>
             <span class="lc-check"></span>
-            <span><strong>Odoo 19 native</strong> — built against the v19 EE codebase with correct constraints and list-view syntax.</span>
+            <span><strong>Your own layout</strong> &mdash; it renders the invoice report configured in your database, custom QWeb templates included.</span>
+        </li>
+        <li>
+            <span class="lc-check"></span>
+            <span><strong>Access-rights aware</strong> &mdash; a user can only preview a document they are allowed to read.</span>
+        </li>
+        <li>
+            <span class="lc-check"></span>
+            <span><strong>All document types</strong> &mdash; customer invoices, vendor bills, credit notes and receipts.</span>
         </li>
     </ul>
 </div>
@@ -199,26 +221,26 @@
     <ol class="lc-steps">
         <li>
             <div>
-                <strong>Open a Recurring Plan</strong>
-                <p>Go to <em>Subscriptions → Configuration → Recurring Plans</em> and open the plan you want to configure.</p>
+                <strong>Open any invoice or bill</strong>
+                <p>Go to <em>Accounting &rarr; Customers &rarr; Invoices</em> and open a record &mdash; draft or posted, both work.</p>
             </div>
         </li>
         <li>
             <div>
-                <strong>Enable Draft Invoicing</strong>
-                <p>Check the <em>Draft Invoicing</em> field in the Details section and save.</p>
+                <strong>Click "PDF Preview"</strong>
+                <p>The button sits next to <em>Print</em> in the top button bar. The panel slides in from the right with the rendered document.</p>
             </div>
         </li>
         <li>
             <div>
-                <strong>Run the scheduler (or wait for the cron)</strong>
-                <p>The next time the subscription invoicing cron runs, invoices for subscriptions on this plan will be created in <strong>Draft</strong> state.</p>
+                <strong>Edit and refresh</strong>
+                <p>Change a line, a payment term or the customer address, save, and press <em>Refresh</em> to re-render the PDF instantly.</p>
             </div>
         </li>
         <li>
             <div>
-                <strong>Review and confirm</strong>
-                <p>Open each draft invoice, verify the amounts, and click <em>Confirm</em> when ready.</p>
+                <strong>Close and post</strong>
+                <p>Close the panel when the document looks right. No attachment, no printed copy, nothing to clean up.</p>
             </div>
         </li>
     </ol>
@@ -226,27 +248,38 @@
 
 <hr class="lc-divider"/>
 
-<!-- ── TECHNICAL NOTE ── -->
+<!-- ── TECHNICAL ── -->
 <div class="lc-section">
     <h2>Technical notes</h2>
     <p>
-        The module overrides <code>SaleOrder._process_auto_invoice()</code> — the dedicated
-        hook Odoo EE provides for exactly this kind of extension. When
-        <code>plan_id.draft_invoicing</code> is <code>True</code>, the override returns early
-        without calling <code>super()</code>, so <code>invoice.action_post()</code> is never
-        reached. The invoice is created normally by the upstream flow; only the final posting
-        step is skipped.
+        The preview is an OWL component registered in the <code>view_widgets</code> registry and
+        injected into <code>account.view_move_form</code>, so it coexists with any other module
+        that extends the invoice form. The PDF is served by a lightweight HTTP controller that
+        calls <code>_render_qweb_pdf()</code> on the report configured for
+        <code>account.move</code> &mdash; by default <code>account.report_invoice</code>, with an
+        automatic fallback to any other QWeb-PDF report bound to the model.
     </p>
     <p>
-        Compatible with <strong>Odoo 19 Enterprise</strong>. Requires the
-        <code>sale_subscription</code> module (included in Odoo Enterprise).
+        Read access is verified with <code>check_access('read')</code> before rendering, so record
+        rules and multi-company restrictions are fully respected.
+    </p>
+    <div class="lc-note">
+        <strong>Requirements.</strong> Odoo 19 (Community or Enterprise), with a working
+        <code>wkhtmltopdf</code> installation &mdash; the same one Odoo already uses to print
+        invoices. No external Python library, no configuration.
+    </div>
+    <p style="margin-top:16px;">
+        <span class="lc-tag">Odoo 19</span>
+        <span class="lc-tag">Community &amp; Enterprise</span>
+        <span class="lc-tag">Accounting</span>
+        <span class="lc-tag">English &amp; Spanish</span>
     </p>
 </div>
 
 <!-- ── FOOTER / CTA ── -->
 <div class="lc-footer">
-    <h3>Developed by Lógica Consultores 360</h3>
-    <p>Odoo Gold Partner · Custom development · Migrations · Support</p>
+    <h3>Developed by L&oacute;gica Consultores 360</h3>
+    <p>Odoo Partner &middot; Custom development &middot; Migrations &middot; Support</p>
     <span style="color: #555; font-size: 0.95rem; display: inline-block; margin: 4px 8px;">www.logicaconsultores.com</span>
     <a class="lc-btn-outline" href="mailto:info@logicaconsultores.com">info@logicaconsultores.com</a>
 </div>
